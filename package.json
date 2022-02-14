@@ -1,6 +1,6 @@
 {
   "name": "react-pictures-carousel",
-  "version": "1.0.2-a",
+  "version": "1.0.3",
   "description": "React carousel infinity",
   "main": "build/index.js",
   "scripts": {

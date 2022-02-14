@@ -1,5 +1,5 @@
 ## [Demo](https://codesandbox.io/s/agitated-breeze-2kmzw?file=/src/App.js)
-![Example](https://firebasestorage.googleapis.com/v0/b/hector-rendon-95fbb.appspot.com/o/react-pictures-carousel%2Fexample.gif?alt=media&token=055e3732-fbaf-4285-9817-e3bdc602f6c7)
+![Example](https://firebasestorage.googleapis.com/v0/b/hector-rendon-95fbb.appspot.com/o/react-pictures-carousel%2Fexample-min.gif?alt=media&token=aa97b3a7-b036-4cee-904b-e3a6cae44f94)
 -----
 ## Installation
 -----
