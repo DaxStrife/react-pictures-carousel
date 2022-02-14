@@ -55,6 +55,26 @@ html {
     cursor: pointer;
 }
 
+.container_images:hover .card_select{
+    background-color: #000;
+}
+
+.container_images:hover .card_icon{
+    bottom: 50%;
+    opacity: 1;
+}
+
+.card_icon{
+    position: absolute; z-index: 2;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: 0.5s ease-out;
+    width: 40px;
+    height: 40px;
+}
+
 .card_select{
     width: var(--width);
     height: var(--height);
@@ -71,15 +91,4 @@ html {
     object-fit: cover;
     border-radius: var(--border-radius);
     position: absolute;
-}
-
-.card_icon{
-    position: absolute; z-index: 2;
-    /* bottom: 50%; */
-    left: 50%;
-    transform: translate(-50%, 50%);
-    /* cursor: pointer; */
-    transition: 0.5s ease-out;
-    width: 40px;
-    height: 40px;
 }

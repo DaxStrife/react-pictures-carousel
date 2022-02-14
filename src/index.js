@@ -4,26 +4,15 @@ import PropTypes from 'prop-types';
 
 import './index.css';
 
-const Item = ({picture, icon, state, setState, position, action}) =>{
-    const handleEnter = () =>{
-        const newState = state
-        newState[position] = true
-        setState([...state, newState])
-    }
-    const handleLeave = () =>{
-        const newState = state
-        newState[position] = false
-        setState([...state, newState])
-    }
+const Item = ({picture, icon, action}) =>{
     return(
-        <div onClick={action} className='container_images' onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+        <div onClick={action} className='container_images'>
             <img alt='' loading='lazy' src={picture} className='pictures' />
             {
                 icon&&
                     <Fragment>
-                        <div className='card_select' style={{backgroundColor:state[position]?'#000':''}} />
-                        <img alt='' src={icon} className='card_icon'
-                            style={{bottom:state[position]?'50%':'0%', opacity:state[position]?1:0}} />
+                        <div className='card_select' />
+                        <img alt='' src={icon} className='card_icon' />
                     </Fragment>
             }
         </div>
@@ -34,10 +23,10 @@ function Carousel({pictures, direction='left', icon, height=400, width=400, bord
     useEffect(()=>{
         if(pictures){
             let imagesAux = pictures.concat(pictures);//  combine two arrays
-            let array = Array(pictures.length * 2);
-            array.fill(false)
+            // let array = Array(pictures.length * 2);
+            // array.fill(false)
+            // setState(()=> array)
 
-            setState(()=> array)
             setImages(()=> imagesAux)
         }
         const auxH = typeof height=='number'? `${height}px`:height
@@ -52,7 +41,6 @@ function Carousel({pictures, direction='left', icon, height=400, width=400, bord
         document.documentElement.style.setProperty('--velocity', `${velocity}s`)
     },[pictures])
 
-    const [state, setState] = useState([])
     const [images, setImages] = useState([])
     return (
         <div className='container'>
@@ -63,9 +51,6 @@ function Carousel({pictures, direction='left', icon, height=400, width=400, bord
                         <Item key={j}
                             picture={i}
                             icon={icon}
-                            state={state}
-                            setState={setState}
-                            position={j}
                             action={action} />
                     ))
                 }
