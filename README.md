@@ -1,4 +1,5 @@
 ## [Demo](https://codesandbox.io/s/agitated-breeze-2kmzw?file=/src/App.js)
+![alt text](https://firebasestorage.googleapis.com/v0/b/hector-rendon-95fbb.appspot.com/o/react-pictures-carousel%2Fexample.gif?alt=media&token=055e3732-fbaf-4285-9817-e3bdc602f6c7)
 -----
 ## Installation
 -----
@@ -18,7 +19,7 @@ yarn add react-pictures-carousel
 | Name      | Type                    | Default   | Description   |
 | --------  | -------------           | --------- | ------------- |
 | pictures  | array of string         |           |               |
-| direction | sintrg                  | left      |Enter `left` or `right` to determine the direcction of travel|
+| direction | string                  | left      |Enter `left` or `right` to determine the direcction of travel|
 | height    | string, number          | 400       |The value is reset to pixels if it is a number |
 | width     | string, number          | 400       |The value is reset to pixels if it is a number |
 | borderRadius | string, number       | 30        |The value is reset to pixels if it is a number |
