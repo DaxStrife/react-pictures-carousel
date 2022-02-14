@@ -1,11 +1,15 @@
 {
   "name": "react-pictures-carousel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React carousel infinity",
   "main": "build/index.js",
   "scripts": {
     "start": "webpack --mode development --config config/webpack.config.js --watch",
     "build": "webpack --mode production --config config/webpack.config.js --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaxStrife/react-pictures-carousel.git"
   },
   "keywords": ["react", "react pictures", "react pictures carousel", "carousel", "pictures", "image carousel", "image-gallery", "gallery"],
   "author": "Hector Rendon",

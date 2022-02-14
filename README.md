@@ -1,3 +1,5 @@
+## [Demo](https://codesandbox.io/s/agitated-breeze-2kmzw?file=/src/App.js)
+-----
 ## Installation
 -----
 ### npm
