@@ -1,0 +1,85 @@
+:root{
+    --height: 300px;
+    --width: 300px;
+    --space: 30px;
+    --border-radius: 30px;
+    --velocity: 50s;
+    --opacity: 0.5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container{
+    position: relative;
+    overflow: hidden;
+    height: var(--height);
+    width: 100%;
+    /* margin:10px 0; */
+}
+
+.container_carousel{
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute; top: 0px;
+}
+
+.carousel_left{
+    left: 0px;
+    animation: carousel_animation_left var(--velocity) linear infinite;
+}
+
+.carousel_right{
+    right: 0px;
+    animation: carousel_animation_right var(--velocity) linear infinite;
+}
+
+@keyframes carousel_animation_left {
+    0% { transform: translate(0, 0); }
+    100%{ transform: translate(-50%, 0); }
+}
+
+@keyframes carousel_animation_right {
+    0% { transform: translate(0, 0); }
+    100%{ transform: translate(50%, 0); }
+}
+
+.container_images{
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    /* margin: 0 30px; */
+    margin: 0 var(--space);
+    cursor: pointer;
+}
+
+.card_select{
+    width: var(--width);
+    height: var(--height);
+    position: absolute; z-index: 1;
+    /* background-color: #000; */
+    transition: 0.5s ease-out;
+    opacity: var(--opacity);
+    border-radius: var(--border-radius);
+}
+
+.pictures{
+    width: var(--width);
+    height: var(--height);
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    position: absolute;
+}
+
+.card_icon{
+    position: absolute; z-index: 2;
+    /* bottom: 50%; */
+    left: 50%;
+    transform: translate(-50%, 50%);
+    /* cursor: pointer; */
+    transition: 0.5s ease-out;
+    width: 40px;
+    height: 40px;
+}
