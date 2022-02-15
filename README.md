@@ -19,15 +19,37 @@ yarn add react-pictures-carousel
 | Name      | Type                    | Default   | Description   |
 | --------  | -------------           | --------- | ------------- |
 | pictures  | array of string         |           |               |
-| direction | string                  | left      |Enter `left` or `right` to determine the direcction of travel|
-| height    | string, number          | 400       |The value is reset to pixels if it is a number |
-| width     | string, number          | 400       |The value is reset to pixels if it is a number |
-| borderRadius | string, number       | 30        |The value is reset to pixels if it is a number |
-| space     | string, number          | 30        |The value is reset to pixels if it is a number |
-| velocity  | number                  | 50        |The value is reset to seconds                  |
-| action    | function                |           |Function that is executed when clicking on the image|
+| direction | string                  | left      |(Optional) Enter `left` or `right` to determine the direcction of travel|
+| height    | string, number          | 400       |(Optional) The value is reset to pixels if it is a number |
+| width     | string, number          | 400       |(Optional) The value is reset to pixels if it is a number |
+| borderRadius | string, number       | 30        |(Optional) The value is reset to pixels if it is a number |
+| space     | string, number          | 30        |(Optional) The value is reset to pixels if it is a number |
+| velocity  | number                  | 50        |(Optional) The value is reset to seconds                  |
+| action    | function                |           |(Optional) Function that is executed when clicking on the image|
 
-## Example
+## Examples
+-----
+```jsx static
+import React from 'react';
+import Carousel from 'react-pictures-carousel';
+
+import img1 from './assets/images/img1.jpg';
+import img2 from './assets/images/img2.jpg';
+import img3 from './assets/images/img3.jpg';
+import img4 from './assets/images/img4.jpg';
+
+const list = [img1, img8, img2, img3, img4]
+
+function App() {
+  return (
+    <div>
+      <Carousel pictures={list} />
+    </div>
+  );
+}
+
+export default App;
+```
 -----
 ```jsx static
 import React from 'react';
@@ -40,7 +62,7 @@ import img4 from './assets/images/img4.jpg';
 
 import icon from './assests/icon.png';
 
-const list = [img1, img8, img2, img3, img4, img5, img6, img7]
+const list = [img1, img8, img2, img3, img4]
 
 function App() {
   const handleClick = () =>{
