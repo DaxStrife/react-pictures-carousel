@@ -38,7 +38,7 @@ import img2 from './assets/images/img2.jpg';
 import img3 from './assets/images/img3.jpg';
 import img4 from './assets/images/img4.jpg';
 
-const list = [img1, img8, img2, img3, img4]
+const list = [img1, img2, img3, img4]
 
 function App() {
   return (
@@ -62,7 +62,7 @@ import img4 from './assets/images/img4.jpg';
 
 import icon from './assests/icon.png';
 
-const list = [img1, img8, img2, img3, img4]
+const list = [img1, img2, img3, img4]
 
 function App() {
   const handleClick = () =>{
